@@ -1,0 +1,48 @@
+body {
+    padding: 20px;
+}
+.form-wrap {
+    max-width: 800px;
+    margin: 20px auto 40px auto;
+}
+.form-wrap form {
+    margin-top: 20px;
+}
+
+#result {
+    display: none;
+}
+#result .result-stats {
+    margin: 0 auto;
+    max-width: 1000px;
+    margin-top: 20px;
+}
+#result table {
+    width: auto;
+    margin: 0 auto;
+}
+#result table img {
+    max-height: 65px;
+}
+
+#result table.attr-table img {
+    max-height: 120px;
+}
+
+#result table th, #result table td {
+    padding: .5em;
+}
+
+#result table td:hover {
+    opacity: 0.8;
+}
+
+.popover img {
+    max-width: 100px;
+}
+
+nav {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+}

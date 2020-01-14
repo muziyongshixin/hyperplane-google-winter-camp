@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+{% set active_page = "facerec" %}
+
+{% block title %}Face Rec N:M Demo{% endblock %}
+
+{% block content %}
+<div class="form-wrap">
+    <h5>Face Recognition N : M</h5>
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group row">
+            <label for="files_a" class="col-3 col-form-label">A imgs</label>
+            <div class="col-9">
+                <input type="file" name="files_a" id="files_a" multiple="true">
+                <small class="form-text text-muted">Hold down &#8984; to select multiple files.</small>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="files_b" class="col-3 col-form-label">B imgs (Optional)</label>
+            <div class="col-9">
+                <input type="file" name="files_b" id="files_b" multiple="true">
+                <small class="form-text text-muted">Hold down &#8984; to select multiple files.</small>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="feature_model" class="col-3 col-form-label">Feature model</label>
+            <div class="col-9">
+                <select class="form-control" id="feature_model" name="feature_model">
+                    {% for model in feature_models %}
+                    <option value="{{model}}">{{ model }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="detect_model" class="col-3 col-form-label">Detect model</label>
+            <div class="col-9">
+                <select class="form-control" id="detect_model" name="detect_model">
+                    {% for model in detect_models %}
+                    <option value="{{model}}">{{ model }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="min_face" class="col-3 col-form-label">Detect min face</label>
+            <div class="col-4">
+                <input class="form-control" type="number" id="min_face" name="min_face">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-9">
+                <button type="submit" class="btn-submit btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div id="result">
+    <table id="result-table" class="table table-bordered table-hover">
+    </table>
+    <div class="result-stats">
+        <p class="det-model">detect model</p>
+        <p class="feat-model">feature model</p>
+        <p class="det-options">detect options</p>
+    </div>
+</div>
+<script src="static/js/facerec.js"></script>
+{% endblock %}

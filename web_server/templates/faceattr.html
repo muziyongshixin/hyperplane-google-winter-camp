@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% set active_page = "faceattr" %}
+
+{% block title %}Video copy detection Demo{% endblock %}
+
+{% block content %}
+<div class="form-wrap">
+    <h5>Video copy detection Demo</h5>
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group row">
+            <label for="files" class="col-3 col-form-label">upload a video:</label>
+            <div class="col-9">
+                <input type="file" name="files" id="files" multiple="true">
+                <small class="form-text text-muted">Hold down &#8984; to select multiple files.</small>
+            </div>
+        </div>
+
+        {% for attr_name in attr_models %}
+        <div class="form-group row">
+            <label for="{{attr_name}}_model" class="col-3 col-form-label">{{attr_name | title}} model</label>
+            <div class="col-9">
+                <select class="form-control" id="{{attr_name}}_model" name="{{attr_name}}_model">
+                    {% for model in attr_models[attr_name] %}
+                    <option value="{{model}}">{{ model }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        {% endfor %}
+
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-9">
+                <button type="submit" class="btn-submit btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div id="result">
+    <table id="result-table" class="table table-bordered table-hover table-striped attr-table">
+    </table>
+    <div class="result-stats">
+        <p class="det-model"></p>
+    </div>
+</div>
+<script src="static/js/faceattr.js"></script>
+{% endblock %}
