@@ -6,7 +6,6 @@ import argparse
 import torchvision
 from background_transfer.log_utils import get_logger
 
-
 from PIL import Image
 import matplotlib.pyplot as plt
 import torchvision.transforms.functional as transforms
@@ -14,6 +13,7 @@ import numpy as np
 import PIL
 import cv2
 import background_transfer.autoencoder as autoencoder
+
 log = get_logger()
 
 
@@ -24,7 +24,8 @@ def parse_args():
 
     parser.add_argument('--content', default='../background_transfer/inputs/contents/1.jpg',
                         help='Path of the content image (or a directory containing images) to be trasformed')
-    parser.add_argument('--style', default='../background_transfer/inputs/styles/5.jpg',  help='Path of the style image (or a directory containing images) to use')
+    parser.add_argument('--style', default='../background_transfer/inputs/styles/5.jpg',
+                        help='Path of the style image (or a directory containing images) to use')
     parser.add_argument('--synthesis', default=False, action='store_true',
                         help='Flag to syntesize a new texture. Must provide a texture style image')
     parser.add_argument('--stylePair', help='Path of two style images (separated by ",") to use in combination')
@@ -49,7 +50,6 @@ def parse_args():
     parser.add_argument('--single-level', default=True, action='store_true',
                         help='Flag to switch to single level stylization')
     return parser.parse_args()
-
 
 
 def load_img(path, new_size):
@@ -84,7 +84,8 @@ def validate_args(args):
                  os.listdir(args.content)]):
             pass
         else:
-            raise ValueError( "--content '" + args.content + "' must be an existing image file or a directory containing at least one supported image")
+            raise ValueError(
+                "--content '" + args.content + "' must be an existing image file or a directory containing at least one supported image")
 
     if args.style:
         if os.path.isfile(args.style) and os.path.splitext(args.style)[-1].lower().endswith(supported_img_formats):
@@ -152,12 +153,17 @@ def save_image(img, content_name, style_name, out_ext, args):
     torchvision.utils.save_image(img.cpu().detach().squeeze(0), save_path)
     return save_path
 
-def save_result_img(img,save_path):
+
+def save_result_img(img, save_path):
     log.info("save image to {}".format(save_path))
     torchvision.utils.save_image(img.cpu().detach().squeeze(0), save_path)
 
 
-args = validate_args(parse_args(""))
+if __name__ == '__main__':
+    args = validate_args(parse_args())
+else:
+    args = validate_args(parse_args(""))
+
 if not args.no_cuda and torch.cuda.is_available():
     log.info('Utilizing the first CUDA gpu available')
     args.device = torch.device('cuda:0')
@@ -172,7 +178,6 @@ model.eval()
 style_img = load_img(args.style, args.styleSize).to(device=args.device)
 
 
-
 def inference(content_image_path=None):
     if content_image_path is not None:
         args.content = content_image_path
@@ -182,27 +187,27 @@ def inference(content_image_path=None):
     except OSError:
         log.exception('Error encoutered while creating output directory ' + args.outDir)
 
-    content_img=load_img(args.content,args.contentSize).to(device=args.device).unsqueeze(0)
-    style_img=load_img(args.style,args.styleSize).to(device=args.device).unsqueeze(0)
+    content_img = load_img(args.content, args.contentSize).to(device=args.device).unsqueeze(0)
+    style_img = load_img(args.style, args.styleSize).to(device=args.device).unsqueeze(0)
     out = model(content_img, style_img)
-    save_path=os.path.join(args.outDir, 'stylized_background.jpg')
-    save_result_img(out,save_path=save_path)
+    save_path = os.path.join(args.outDir, 'stylized_background.jpg')
+    save_result_img(out, save_path=save_path)
     log.info('Stylization completed, exiting.')
     return save_path
 
 
 def real_time_inference(content_image):
-    content_image=cv2Tensor(content_image,args.contentSize)
-    content_image=content_image.unsqueeze(0).to(device=args.device)
-    style_image=style_img.unsqueeze(0).to(device=args.device)
+    content_image = cv2Tensor(content_image, args.contentSize)
+    content_image = content_image.unsqueeze(0).to(device=args.device)
+    style_image = style_img.unsqueeze(0).to(device=args.device)
     out = model(content_image, style_image)
-    out=out.squeeze()
+    out = out.squeeze()
     return out
 
 
-def cv2Tensor(input_img,new_size):
-     img = Image.fromarray(cv2.cvtColor(input_img, cv2.COLOR_BGR2RGB))
-     if new_size:
+def cv2Tensor(input_img, new_size):
+    img = Image.fromarray(cv2.cvtColor(input_img, cv2.COLOR_BGR2RGB))
+    if new_size:
         # for fixed-size squared resizing, leave only the following line uncommented in this if statement
         # img = transforms.resize(img, (new_size, new_size), PIL.Image.BICUBIC)
         width, height = img.size
@@ -213,14 +218,15 @@ def cv2Tensor(input_img,new_size):
         else:
             new_shape = (new_size, int(new_size * (width / height)))
             img = transforms.resize(img, new_shape, PIL.Image.BICUBIC)
-     return transforms.to_tensor(img)
+    return transforms.to_tensor(img)
+
 
 if __name__ == "__main__":
-    content_path='inputs/contents/1.jpg'
-    img=cv2.imread(content_path)
+    content_path = 'inputs/contents/1.jpg'
+    img = cv2.imread(content_path)
     print(img.shape)
-    content_image = cv2Tensor(img,512)
-    result=real_time_inference(content_image)
-    result=result.permute(1,2,0).numpy()
+    content_image = cv2Tensor(img, 512)
+    result = real_time_inference(content_image)
+    result = result.permute(1, 2, 0).numpy()
     plt.imshow(result)
     plt.show()
