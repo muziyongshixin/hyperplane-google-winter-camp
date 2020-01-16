@@ -1,0 +1,22 @@
+<!doctype html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="static/css/app.css" type="text/css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+    <script src="http://vjs.zencdn.net/c/video.js"></script>
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+    {% set active_page = active_page|default('facerec') -%}
+    <nav class="nav nav-pills flex-column">
+      <a class="nav-link {% if active_page == 'faceattr' %}active{% endif %}"
+		  href="{{ './faceattr/' if active_page == 'facerec' else '' }}">Video Copy Detection</a>
+    </nav>
+</body>
+

@@ -11,7 +11,6 @@ import numpy as np
 # from .libs.boe_search import img_search
 from web_server.libs.image_transfer import image_transfer
 
-from IPython import embed
 import zipfile
 from flask import send_file
 
@@ -78,9 +77,9 @@ def get_model_output(files ):
     rid = str(uuid.uuid1())
 
     result_dir = os.path.join(app.instance_path, config.RESULT_BASEDIR, 'search', rid)
+    print(app.instance_path)
     if not os.path.exists(result_dir):
         os.makedirs(result_dir)
-
     results = []
     for i, file in enumerate(files):
         if not file.filename:
@@ -91,28 +90,27 @@ def get_model_output(files ):
             file.save(query_file_path)
             file.close()
         print('save query image to %s successfully' % query_file_path)
-
-        result_videos = image_transfer(query_file_path)  # 得到query video的图片以及 查询结果
-
+        cur_job_dir=result_dir
+        print('cur_job dir is {}'.format(cur_job_dir))
+        result_videos = image_transfer(query_file_path,cur_job_dir=cur_job_dir)  # 得到query video的图片以及 查询结果
+        for ele in result_videos:
+            ele['url']=os.path.relpath(ele['url'],app.instance_path)
         # # 将result video里的图片保存到instance目录下
         # for index, video_sample in enumerate(result_videos):
         #     video_sample['url'] = os.path.join("videos", os.path.relpath(video_sample['url'], config.DATABASEDIR))
 
-        data = {
-            'id': i,
-            'video_nums': len(result_videos),
-            'query_video': os.path.relpath(query_file_path, app.instance_path),
-            'result': {"video_lists": result_videos},
-        }
+        data = {'img_lists':result_videos}
         results.append(data)
 
-    result = {
-        'records': results,
-    }
+    result = { 'records': results[0] }
     with open(os.path.join(result_dir, 'result.json'), 'w') as f:
         f.write(json.dumps(result))
     return rid
 
 
+def init_models():
+    pass
+
 if __name__ == "__main__":
-    app.run('0.0.0.0', 8181)
+    init_models()
+    app.run('0.0.0.0', 8181,use_reloader=False)

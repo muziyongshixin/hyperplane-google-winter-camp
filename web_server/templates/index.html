@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="body">
+        <!-- <h1>eqew </h1> -->
+        <img class="photo" src="C:\Users\木子-勇士心\Pictures\Saved Pictures\1.jpg" />
+        <div class="submit">submit</button>
+        </div>
+</body>
+<style>
+    .body {
+        width: 100vw;
+        height: 100vh;
+        background-color: pink;
+    }
+
+    .photo {
+        width: 80%;
+        height: 30%;
+        margin-top: 40%;
+        margin-left: 10%;
+        box-decoration-break: red;
+    }
+
+    .submit {
+        margin-top: 20%;
+        margin-left: 37%;
+        width: 25%;
+        height: 7%;
+        background: url('https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=4204973366,3363365188&fm=26&gp=0.jpg');
+        border-radius: 10%;
+    }
+
+    @-webkit-keyframes submit {
+        from {
+            -webkit-box-shadow: 0 0 5px #bbb;
+        }
+
+        50% {
+            -webkit-box-shadow: 0 0 10px red;
+        }
+
+        to {
+            -webkit-box-shadow: 0 0 5px #bbb;
+        }
+    }
+
+    @-webkit-keyframes shineBlue {
+        from {
+            -webkit-box-shadow: 0 0 9px #333;
+        }
+
+        50% {
+            -webkit-box-shadow: 0 0 18px blue;
+        }
+
+        to {
+            -webkit-box-shadow: 0 0 9px #333;
+        }
+    }
+
+    .submit {
+        -webkit-animation-name: submit;
+        -webkit-animation-duration: 3s;
+        -webkit-animation-iteration-count: infinite;
+    }
+</style>
+
+</html>

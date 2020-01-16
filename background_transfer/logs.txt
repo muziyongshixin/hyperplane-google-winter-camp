@@ -1,0 +1,144 @@
+2020-01-16 11:40:56,514 - [INFO] - log_utils - Utilizing the cpu for computations
+2020-01-16 11:40:56,515 - [INFO] - log_utils - Creating content and style pairs dataset object
+2020-01-16 11:40:56,517 - [INFO] - log_utils - Adding: ('inputs/background/America.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,517 - [INFO] - log_utils - Adding: ('inputs/background/france-paris-eiffel-tower.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,518 - [INFO] - log_utils - Adding: ('inputs/background/france.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,520 - [INFO] - log_utils - Adding: ('inputs/background/lion.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,521 - [INFO] - log_utils - Adding: ('inputs/background/London.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,522 - [INFO] - log_utils - Adding: ('inputs/background/white_house.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,523 - [INFO] - log_utils - Adding: ('inputs/background/Àö½­¹Å³Ç1.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,523 - [INFO] - log_utils - Adding: ('inputs/background/ÄÚÃÉ¹Å²ÝÔ­.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,524 - [INFO] - log_utils - Adding: ('inputs/background/ÄÚÃÉ¹Å²ÝÔ­2.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,525 - [INFO] - log_utils - Adding: ('inputs/background/±ùµº1.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,525 - [INFO] - log_utils - Adding: ('inputs/background/±ùµº2.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,526 - [INFO] - log_utils - Adding: ('inputs/background/¼ÓÄÃ´ó·ãÁÖ.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,527 - [INFO] - log_utils - Adding: ('inputs/background/¼ÓÄÃ´ó²Ýµé.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,528 - [INFO] - log_utils - Adding: ('inputs/background/¹ú¼Ò´ó¾çÔº1.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,528 - [INFO] - log_utils - Adding: ('inputs/background/¹ú¼Ò´ó¾çÔº2.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,529 - [INFO] - log_utils - Adding: ('inputs/background/Ï¤Äá¸è¾çÔº1.png', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,529 - [INFO] - log_utils - Adding: ('inputs/background/Ï¤Äá¸è¾çÔº2.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,529 - [INFO] - log_utils - Adding: ('inputs/background/¹Ê¹¬1.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,530 - [INFO] - log_utils - Adding: ('inputs/background/¹Ê¹¬2.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,530 - [INFO] - log_utils - Adding: ('inputs/background/ÆÕ¼ªµº1.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,531 - [INFO] - log_utils - Adding: ('inputs/background/ÆÕ¼ªµº2.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,531 - [INFO] - log_utils - Adding: ('inputs/background/±ÈÈøÐ±Ëþ.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,532 - [INFO] - log_utils - Adding: ('inputs/background/ãò¹Áºþ1.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,533 - [INFO] - log_utils - Adding: ('inputs/background/ãò¹Áºþ2.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,533 - [INFO] - log_utils - Adding: ('inputs/background/ÂÞÂí¶·ÊÞ³¡.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,534 - [INFO] - log_utils - Adding: ('inputs/background/ÐíÔ¸³Ø.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,534 - [INFO] - log_utils - Adding: ('inputs/background/µÏÊ¿Äá1.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,535 - [INFO] - log_utils - Adding: ('inputs/background/µÏÊ¿Äá2.jpg', 'inputs/cartoon_style/5.jpg') to the dataset
+2020-01-16 11:40:56,535 - [INFO] - log_utils - Using single-level stylization pipeline
+2020-01-16 11:40:56,753 - [INFO] - log_utils - Starting 0/28 stylization iteration
+2020-01-16 11:40:56,753 - [INFO] - log_utils - content: ['inputs/background/America.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:41:47,137 - [INFO] - log_utils - Wall-clock time took for stylization: 50.3716516s
+2020-01-16 11:41:47,138 - [INFO] - log_utils - save image to outputs\America_stylized_by_5_alpha_20.jpg
+2020-01-16 11:41:47,299 - [INFO] - log_utils - Starting 1/28 stylization iteration
+2020-01-16 11:41:47,299 - [INFO] - log_utils - content: ['inputs/background/france-paris-eiffel-tower.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:42:24,078 - [INFO] - log_utils - Wall-clock time took for stylization: 36.777805300000004s
+2020-01-16 11:42:24,079 - [INFO] - log_utils - save image to outputs\france-paris-eiffel-tower_stylized_by_5_alpha_20.jpg
+2020-01-16 11:42:24,211 - [INFO] - log_utils - Starting 2/28 stylization iteration
+2020-01-16 11:42:24,212 - [INFO] - log_utils - content: ['inputs/background/france.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:42:55,072 - [INFO] - log_utils - Wall-clock time took for stylization: 30.85852840000001s
+2020-01-16 11:42:55,073 - [INFO] - log_utils - save image to outputs\france_stylized_by_5_alpha_20.jpg
+2020-01-16 11:42:55,179 - [INFO] - log_utils - Starting 3/28 stylization iteration
+2020-01-16 11:42:55,179 - [INFO] - log_utils - content: ['inputs/background/lion.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:43:41,449 - [INFO] - log_utils - Wall-clock time took for stylization: 46.267887500000015s
+2020-01-16 11:43:41,450 - [INFO] - log_utils - save image to outputs\lion_stylized_by_5_alpha_20.jpg
+2020-01-16 11:43:41,596 - [INFO] - log_utils - Starting 4/28 stylization iteration
+2020-01-16 11:43:41,596 - [INFO] - log_utils - content: ['inputs/background/London.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:44:20,081 - [INFO] - log_utils - Wall-clock time took for stylization: 38.48210709999998s
+2020-01-16 11:44:20,081 - [INFO] - log_utils - save image to outputs\London_stylized_by_5_alpha_20.jpg
+2020-01-16 11:44:20,201 - [INFO] - log_utils - Starting 5/28 stylization iteration
+2020-01-16 11:44:20,202 - [INFO] - log_utils - content: ['inputs/background/white_house.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:44:52,752 - [INFO] - log_utils - Wall-clock time took for stylization: 32.54901579999998s
+2020-01-16 11:44:52,753 - [INFO] - log_utils - save image to outputs\white_house_stylized_by_5_alpha_20.jpg
+2020-01-16 11:44:52,860 - [INFO] - log_utils - Starting 6/28 stylization iteration
+2020-01-16 11:44:52,861 - [INFO] - log_utils - content: ['inputs/background/Àö½­¹Å³Ç1.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:45:47,234 - [INFO] - log_utils - Wall-clock time took for stylization: 54.369484700000015s
+2020-01-16 11:45:47,244 - [INFO] - log_utils - save image to outputs\Àö½­¹Å³Ç1_stylized_by_5_alpha_20.jpg
+2020-01-16 11:45:47,388 - [INFO] - log_utils - Starting 7/28 stylization iteration
+2020-01-16 11:45:47,390 - [INFO] - log_utils - content: ['inputs/background/ÄÚÃÉ¹Å²ÝÔ­.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:46:23,951 - [INFO] - log_utils - Wall-clock time took for stylization: 36.556245299999944s
+2020-01-16 11:46:23,953 - [INFO] - log_utils - save image to outputs\ÄÚÃÉ¹Å²ÝÔ­_stylized_by_5_alpha_20.jpg
+2020-01-16 11:46:24,063 - [INFO] - log_utils - Starting 8/28 stylization iteration
+2020-01-16 11:46:24,064 - [INFO] - log_utils - content: ['inputs/background/ÄÚÃÉ¹Å²ÝÔ­2.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:47:17,155 - [INFO] - log_utils - Wall-clock time took for stylization: 53.08962589999999s
+2020-01-16 11:47:17,156 - [INFO] - log_utils - save image to outputs\ÄÚÃÉ¹Å²ÝÔ­2_stylized_by_5_alpha_20.jpg
+2020-01-16 11:47:17,264 - [INFO] - log_utils - Starting 9/28 stylization iteration
+2020-01-16 11:47:17,265 - [INFO] - log_utils - content: ['inputs/background/±ùµº1.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:47:49,604 - [INFO] - log_utils - Wall-clock time took for stylization: 32.33666800000003s
+2020-01-16 11:47:49,605 - [INFO] - log_utils - save image to outputs\±ùµº1_stylized_by_5_alpha_20.jpg
+2020-01-16 11:47:49,705 - [INFO] - log_utils - Starting 10/28 stylization iteration
+2020-01-16 11:47:49,705 - [INFO] - log_utils - content: ['inputs/background/±ùµº2.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:48:39,408 - [INFO] - log_utils - Wall-clock time took for stylization: 49.70098109999998s
+2020-01-16 11:48:39,410 - [INFO] - log_utils - save image to outputs\±ùµº2_stylized_by_5_alpha_20.jpg
+2020-01-16 11:48:39,530 - [INFO] - log_utils - Starting 11/28 stylization iteration
+2020-01-16 11:48:39,530 - [INFO] - log_utils - content: ['inputs/background/¼ÓÄÃ´ó·ãÁÖ.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:49:25,990 - [INFO] - log_utils - Wall-clock time took for stylization: 46.45738080000001s
+2020-01-16 11:49:25,990 - [INFO] - log_utils - save image to outputs\¼ÓÄÃ´ó·ãÁÖ_stylized_by_5_alpha_20.jpg
+2020-01-16 11:49:26,107 - [INFO] - log_utils - Starting 12/28 stylization iteration
+2020-01-16 11:49:26,108 - [INFO] - log_utils - content: ['inputs/background/¼ÓÄÃ´ó²Ýµé.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:50:02,070 - [INFO] - log_utils - Wall-clock time took for stylization: 35.960348299999964s
+2020-01-16 11:50:02,071 - [INFO] - log_utils - save image to outputs\¼ÓÄÃ´ó²Ýµé_stylized_by_5_alpha_20.jpg
+2020-01-16 11:50:02,157 - [INFO] - log_utils - Starting 13/28 stylization iteration
+2020-01-16 11:50:02,158 - [INFO] - log_utils - content: ['inputs/background/¹ú¼Ò´ó¾çÔº1.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:50:43,563 - [INFO] - log_utils - Wall-clock time took for stylization: 41.402780100000086s
+2020-01-16 11:50:43,563 - [INFO] - log_utils - save image to outputs\¹ú¼Ò´ó¾çÔº1_stylized_by_5_alpha_20.jpg
+2020-01-16 11:50:43,705 - [INFO] - log_utils - Starting 14/28 stylization iteration
+2020-01-16 11:50:43,706 - [INFO] - log_utils - content: ['inputs/background/¹ú¼Ò´ó¾çÔº2.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:51:28,803 - [INFO] - log_utils - Wall-clock time took for stylization: 45.0953988s
+2020-01-16 11:51:28,804 - [INFO] - log_utils - save image to outputs\¹ú¼Ò´ó¾çÔº2_stylized_by_5_alpha_20.jpg
+2020-01-16 11:51:28,944 - [INFO] - log_utils - Starting 15/28 stylization iteration
+2020-01-16 11:51:28,946 - [INFO] - log_utils - content: ['inputs/background/Ï¤Äá¸è¾çÔº1.png']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:52:10,296 - [INFO] - log_utils - Wall-clock time took for stylization: 41.347541099999944s
+2020-01-16 11:52:10,297 - [INFO] - log_utils - save image to outputs\Ï¤Äá¸è¾çÔº1_stylized_by_5_alpha_20.png
+2020-01-16 11:52:10,835 - [INFO] - log_utils - Starting 16/28 stylization iteration
+2020-01-16 11:52:10,836 - [INFO] - log_utils - content: ['inputs/background/Ï¤Äá¸è¾çÔº2.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:52:44,888 - [INFO] - log_utils - Wall-clock time took for stylization: 34.051272200000085s
+2020-01-16 11:52:44,889 - [INFO] - log_utils - save image to outputs\Ï¤Äá¸è¾çÔº2_stylized_by_5_alpha_20.jpg
+2020-01-16 11:52:44,992 - [INFO] - log_utils - Starting 17/28 stylization iteration
+2020-01-16 11:52:44,993 - [INFO] - log_utils - content: ['inputs/background/¹Ê¹¬1.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:53:34,818 - [INFO] - log_utils - Wall-clock time took for stylization: 49.822353200000066s
+2020-01-16 11:53:34,819 - [INFO] - log_utils - save image to outputs\¹Ê¹¬1_stylized_by_5_alpha_20.jpg
+2020-01-16 11:53:34,929 - [INFO] - log_utils - Starting 18/28 stylization iteration
+2020-01-16 11:53:34,930 - [INFO] - log_utils - content: ['inputs/background/¹Ê¹¬2.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:54:12,846 - [INFO] - log_utils - Wall-clock time took for stylization: 37.91358160000004s
+2020-01-16 11:54:12,847 - [INFO] - log_utils - save image to outputs\¹Ê¹¬2_stylized_by_5_alpha_20.jpg
+2020-01-16 11:54:12,964 - [INFO] - log_utils - Starting 19/28 stylization iteration
+2020-01-16 11:54:12,965 - [INFO] - log_utils - content: ['inputs/background/ÆÕ¼ªµº1.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:55:07,073 - [INFO] - log_utils - Wall-clock time took for stylization: 54.10570199999995s
+2020-01-16 11:55:07,074 - [INFO] - log_utils - save image to outputs\ÆÕ¼ªµº1_stylized_by_5_alpha_20.jpg
+2020-01-16 11:55:07,175 - [INFO] - log_utils - Starting 20/28 stylization iteration
+2020-01-16 11:55:07,176 - [INFO] - log_utils - content: ['inputs/background/ÆÕ¼ªµº2.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:55:43,203 - [INFO] - log_utils - Wall-clock time took for stylization: 36.025291100000004s
+2020-01-16 11:55:43,203 - [INFO] - log_utils - save image to outputs\ÆÕ¼ªµº2_stylized_by_5_alpha_20.jpg
+2020-01-16 11:55:43,342 - [INFO] - log_utils - Starting 21/28 stylization iteration
+2020-01-16 11:55:43,342 - [INFO] - log_utils - content: ['inputs/background/±ÈÈøÐ±Ëþ.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:56:38,090 - [INFO] - log_utils - Wall-clock time took for stylization: 54.745713199999955s
+2020-01-16 11:56:38,091 - [INFO] - log_utils - save image to outputs\±ÈÈøÐ±Ëþ_stylized_by_5_alpha_20.jpg
+2020-01-16 11:56:38,277 - [INFO] - log_utils - Starting 22/28 stylization iteration
+2020-01-16 11:56:38,277 - [INFO] - log_utils - content: ['inputs/background/ãò¹Áºþ1.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:57:37,197 - [INFO] - log_utils - Wall-clock time took for stylization: 58.914788300000055s
+2020-01-16 11:57:37,197 - [INFO] - log_utils - save image to outputs\ãò¹Áºþ1_stylized_by_5_alpha_20.jpg
+2020-01-16 11:57:37,337 - [INFO] - log_utils - Starting 23/28 stylization iteration
+2020-01-16 11:57:37,338 - [INFO] - log_utils - content: ['inputs/background/ãò¹Áºþ2.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:58:19,495 - [INFO] - log_utils - Wall-clock time took for stylization: 42.15243530000009s
+2020-01-16 11:58:19,495 - [INFO] - log_utils - save image to outputs\ãò¹Áºþ2_stylized_by_5_alpha_20.jpg
+2020-01-16 11:58:19,603 - [INFO] - log_utils - Starting 24/28 stylization iteration
+2020-01-16 11:58:19,604 - [INFO] - log_utils - content: ['inputs/background/ÂÞÂí¶·ÊÞ³¡.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 11:59:13,637 - [INFO] - log_utils - Wall-clock time took for stylization: 54.029522799999995s
+2020-01-16 11:59:13,638 - [INFO] - log_utils - save image to outputs\ÂÞÂí¶·ÊÞ³¡_stylized_by_5_alpha_20.jpg
+2020-01-16 11:59:13,789 - [INFO] - log_utils - Starting 25/28 stylization iteration
+2020-01-16 11:59:13,790 - [INFO] - log_utils - content: ['inputs/background/ÐíÔ¸³Ø.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 12:00:13,121 - [INFO] - log_utils - Wall-clock time took for stylization: 59.32460399999991s
+2020-01-16 12:00:13,136 - [INFO] - log_utils - save image to outputs\ÐíÔ¸³Ø_stylized_by_5_alpha_20.jpg
+2020-01-16 12:00:13,359 - [INFO] - log_utils - Starting 26/28 stylization iteration
+2020-01-16 12:00:13,361 - [INFO] - log_utils - content: ['inputs/background/µÏÊ¿Äá1.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 12:01:05,817 - [INFO] - log_utils - Wall-clock time took for stylization: 52.451663900000085s
+2020-01-16 12:01:05,818 - [INFO] - log_utils - save image to outputs\µÏÊ¿Äá1_stylized_by_5_alpha_20.jpg
+2020-01-16 12:01:06,006 - [INFO] - log_utils - Starting 27/28 stylization iteration
+2020-01-16 12:01:06,007 - [INFO] - log_utils - content: ['inputs/background/µÏÊ¿Äá2.jpg']	style: ['inputs/cartoon_style/5.jpg']
+2020-01-16 12:02:06,305 - [INFO] - log_utils - Wall-clock time took for stylization: 60.2935415999998s
+2020-01-16 12:02:06,307 - [INFO] - log_utils - save image to outputs\µÏÊ¿Äá2_stylized_by_5_alpha_20.jpg
+2020-01-16 12:02:06,377 - [INFO] - log_utils - Stylization completed, exiting.

@@ -1,0 +1,6 @@
+2020-01-15 17:31:22,203 - [INFO] - background_transfer.log_utils - Utilizing the cpu for computations
+2020-01-15 17:31:22,203 - [INFO] - background_transfer.log_utils - Using single-level stylization pipeline
+2020-01-15 17:33:51,062 - [INFO] - background_transfer.log_utils - save image to D:\codes\python code\hyperplane-google-winter-camp\web_server\instance\results\search\21806a06-377a-11ea-b209-185680d0cf9a\stylized_background.jpg
+2020-01-15 17:33:51,071 - [INFO] - background_transfer.log_utils - Stylization completed, exiting.
+2020-01-15 17:34:13,714 - [INFO] - background_transfer.log_utils - save image to D:\codes\python code\hyperplane-google-winter-camp\web_server\instance\results\search\2e5233dc-377a-11ea-924c-185680d0cf9a\stylized_background.jpg
+2020-01-15 17:34:13,724 - [INFO] - background_transfer.log_utils - Stylization completed, exiting.
