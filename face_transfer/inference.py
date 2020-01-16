@@ -90,13 +90,11 @@ def check_args(args):
         print('batch size must be larger than or equal to one')
     return args
 
-
 """main"""
 # parse arguments
 args = parse_args()
 if args is None:
     raise ValueError("args in the face inference model is None")
-
 
 class Context(object):
     def __init__(self, sess=None, gan=None, initialized=False):
@@ -150,7 +148,6 @@ def inference(input_img_path=None, **kwargs):
     print('==============UGATIT save image to {}'.format(image_path))
     print(" [*] Face transfer finished!")
     return image_path
-
 
 if __name__ == '__main__':
     # main()

@@ -1,7 +1,4 @@
-'''
-Author  : Zhengwei Li
-Version : 1.0.0 
-'''
+
 
 import cv2
 import os

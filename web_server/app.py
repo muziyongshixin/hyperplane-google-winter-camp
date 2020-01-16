@@ -1,23 +1,13 @@
-import os
-import sys
-import uuid
 import json
-from datetime import datetime
+import os
+import uuid
 
 from flask import (Flask, render_template, request, redirect,
-                   send_from_directory, jsonify, Response)
-import cv2
-import numpy as np
-# from .libs.boe_search import img_search
+                   send_from_directory, jsonify)
 from web_server.libs.image_transfer import image_transfer
 
-import zipfile
-from flask import send_file
-
-import random
 
 def init_path():
-    import importlib
     pass
 
 
@@ -92,14 +82,14 @@ def get_model_output(files ):
         print('save query image to %s successfully' % query_file_path)
         cur_job_dir=result_dir
         print('cur_job dir is {}'.format(cur_job_dir))
-        result_videos = image_transfer(query_file_path,cur_job_dir=cur_job_dir)  # 得到query video的图片以及 查询结果
-        for ele in result_videos:
+        result_images = image_transfer(query_file_path,cur_job_dir=cur_job_dir)  # 得到query video的图片以及 查询结果
+        for ele in result_images:
             ele['url']=os.path.relpath(ele['url'],app.instance_path)
         # # 将result video里的图片保存到instance目录下
         # for index, video_sample in enumerate(result_videos):
         #     video_sample['url'] = os.path.join("videos", os.path.relpath(video_sample['url'], config.DATABASEDIR))
 
-        data = {'img_lists':result_videos}
+        data = {'img_lists':result_images}
         results.append(data)
 
     result = { 'records': results[0] }

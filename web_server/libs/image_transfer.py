@@ -5,18 +5,17 @@ import numpy as np
 
 from background_transfer.inference import inference as background_transfer
 from face_transfer.inference import inference as face_transfer
+from matting.camera import inference as face_matting
 
-
-# from matting.camera import  inference as face_matting
 
 def matting_images(image_path):
-    cmd='D:/software/anaconda/envs/tf1.14/python "D:/codes/python code/hyperplane-google-winter-camp/matting/camera.py"'+'  --test_image_path={}'.format(image_path)
-    print( cmd)
-    os.system(cmd)
-    print("matting finished")
-    # front_img_path,back_img_path=face_matting(image_path)
-    # print("save front_image  and back_image to {}".format(front_img_path))
-    # return front_img_path,back_img_path
+    # cmd='D:/software/anaconda/envs/tf1.14/python "D:/codes/python code/hyperplane-google-winter-camp/matting/camera.py"'+'  --test_image_path={}'.format(image_path)
+    # print( cmd)
+    # os.system(cmd)
+    # print("matting finished")
+    front_img_path, back_img_path = face_matting(image_path)
+    print("save front_image  and back_image to {}".format(front_img_path))
+    return front_img_path, back_img_path
 
 
 def transfer_human_face(image_path):
@@ -86,7 +85,6 @@ def fuse_result(front_anime_path, background_path):
     back[int(-w_dim * front_w):, int(-h_dim * front_h):, :][front > 15] = front[front > 15]
 
     # back[-400:, -400:, :] *= front
-
     res_img = Image.fromarray(back)
     save_dir = os.path.dirname(front_anime_path)
     save_path = os.path.join(save_dir, 'result_image.jpg')
@@ -101,12 +99,10 @@ def image_transfer(image_path, **kwargs):
     :param image_path:  保存到instance里的用户上传的图片
     :return: 模型返回的图片路径
     '''
-    cur_job_dir = kwargs['cur_job_dir']
-    #
-    result_background_path=transfer_background(image_path)
+    result_background_path = transfer_background(kwargs['destination'])
     # result_background_path = r'D:\codes\python code\hyperplane-google-winter-camp\background_transfer\outputs\加拿大枫林_stylized_by_5_alpha_20.jpg'
 
-    front_mask_path, back_mask_path=matting_images(image_path)
+    front_mask_path, back_mask_path = matting_images(image_path)
     # back_mask_path = r'D:\codes\python code\hyperplane-google-winter-camp\web_server\instance\results\search\f50baf5c-3845-11ea-875d-185680d0cf9a\back.jpg'
     anime_file_path = transfer_human_face(image_path)
 
@@ -114,9 +110,8 @@ def image_transfer(image_path, **kwargs):
 
     fuse_result_path = fuse_result(front_anime_path=front_anime_path, background_path=result_background_path)
 
-    sample0 = {"url": fuse_result_path
-               # "url": 'D:/codes/python code/hyperplane-google-winter-camp/web_server/instance/results/search/efc996dc-3775-11ea-b462-185680d0cf9a/stylized_background.jpg'
-               }
+    sample0 = {"url": fuse_result_path}
+    # "url": 'D:/codes/python code/hyperplane-google-winter-camp/web_server/instance/results/search/efc996dc-3775-11ea-b462-185680d0cf9a/stylized_background.jpg'
 
     res_list = [sample0]
 
@@ -125,8 +120,8 @@ def image_transfer(image_path, **kwargs):
 
 if __name__ == "__main__":
     # input_path = r"'D:\codes\python code\hyperplane-google-winter-camp\matting\input_img\selfie.jpg'"
-    matting_main_path="D:/codes/python code/hyperplane-google-winter-camp/matting/"
-    image_path="\'D:/codes/python code/hyperplane-google-winter-camp/web_server/instance/results/search/f565dcd2-3844-11ea-a3ac-185680d0cf9a/source_ccc.jpg\'"
+    matting_main_path = "D:/codes/python code/hyperplane-google-winter-camp/matting/"
+    image_path = "\'D:/codes/python code/hyperplane-google-winter-camp/web_server/instance/results/search/f565dcd2-3844-11ea-a3ac-185680d0cf9a/source_ccc.jpg\'"
     # input_path=os.path.relpath(image_path,matting_main_path)
-    input_path=image_path
+    input_path = image_path
     matting_images(input_path)
