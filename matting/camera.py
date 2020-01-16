@@ -17,6 +17,7 @@ parser = argparse.ArgumentParser(description='human matting')
 parser.add_argument('--model', default='D:/codes/python code/hyperplane-google-winter-camp/matting/pre_trained/erd_seg_matting/model/model_obj.pth', help='preTrained model')
 parser.add_argument('--without_gpu', action='store_true', default=True, help='use cpu')
 parser.add_argument('--only_bg', action='store_true', default=True, help='use cpu')
+parser.add_argument('--test_image_path', default='',type=str, help='image to matting')
 
 if __name__ == "__main__":
     args = parser.parse_args()
@@ -271,7 +272,9 @@ def main(args):
     camera_seg(args, myModel)
 
 if __name__ == "__main__":
-    # main(args)
-    input_path=r'D:\codes\python code\hyperplane-google-winter-camp\matting\input_img\nnn.jpg'
+    # main(args)web_server/instance/results/search/f565dcd2-3844-11ea-a3ac-185680d0cf9a
+    input_path='../web_server/instance/results/search/f565dcd2-3844-11ea-a3ac-185680d0cf9a/source_ccc.jpg'
+    # input_path=args.test_image_path
+    print("trying to matting the input image {}".format(input_path))
     inference(input_path)
 
