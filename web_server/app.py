@@ -1,23 +1,13 @@
-import os
-import sys
-import uuid
 import json
-from datetime import datetime
+import os
+import uuid
 
 from flask import (Flask, render_template, request, redirect,
-                   send_from_directory, jsonify, Response)
-import cv2
-import numpy as np
-# from .libs.boe_search import img_search
+                   send_from_directory, jsonify)
 from web_server.libs.image_transfer import image_transfer
 
-import zipfile
-from flask import send_file
-
-import random
 
 def init_path():
-    import importlib
     pass
 
 

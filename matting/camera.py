@@ -1,3 +1,7 @@
+'''
+Author  : Zhengwei Li
+Version : 1.0.0 
+'''
 import time
 import cv2
 import torch 
