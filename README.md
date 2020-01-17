@@ -16,4 +16,17 @@ Please run the `app.py` in the `web_server` folder to start the program, and try
 All dependency is contained in the `requirements.yml` file. Just enjoy it !!!
 
  
+## Reference
+
+[1] Kim J, Kim M, Kang H, et al. U-GAT-IT
+
+[2] Li Y, Fang C, Yang J, et al. Universal style transfer via feature transforms
+
+[3] Zhu, Bingke et al. “Fast Deep Matting for Portrait Animation on Mobile Phone.” 
+
+[4] https://github.com/taki0112/UGATIT
+
+[5] https://github.com/Yijunmaverick/UniversalStyleTransfer
+
+[6] https://github.com/ofirlevy/FastMattingPortrait
 
