@@ -15,6 +15,43 @@ Please run the `app.py` in the `web_server` folder to start the program, and try
 
 All dependency is contained in the `requirements.yml` file. Just enjoy it !!!
 
+## Demos
+
+Here are some demo images and demo videos.
+
+---
+
+- Background Style Transfer (Artist Style and Anime Style is shown below.)
+
+![ava](web_server/static/img/background.jpg)
+
+---
+- Human Matting and Face Style Translation
+
+![ava](web_server/static/img/matting.jpg)
+
+---
+- Foreground and Background Fusion and Final Result. 
+
+![ava](web_server/static/img/result.jpg)
+
+---
+
+- Html5 Demo &  Real Time Human Matting and Background Style Transfer in Video Data.
+
+<video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
+<source id="mp4" src="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.mp4" type="video/mp4">
+</video>
+<table align='center'>
+<tr align='center'>
+<td> Html5 Demo </td>
+<td> Real Time Matting </td>
+</tr>
+<tr>
+<td><img src = 'web_server/static/img/html5.jpg'>
+<td><img src = 'web_server/static/img/video.jpg'>
+</tr>
+</table>
  
 ## Reference
 
