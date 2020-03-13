@@ -39,16 +39,15 @@ Here are some demo images and demo videos.
 
 - Html5 Demo &  Real Time Human Matting and Background Style Transfer in Video Data.
 
-<video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
-<source id="mp4" src="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.mp4" type="video/mp4">
-</video>
+(Click the pictures below to view the demo video)
+
 <table align='center'>
 <tr align='center'>
 <td> Html5 Demo </td>
-<td> Real Time Matting </td>
+<td> Real Time Matting and Background Transfer</td>
 </tr>
 <tr>
-<td><img src = 'web_server/static/img/html5.jpg'>
+<td><a href="http://player.youku.com/embed/XMzYzNTE5OTA4NA==" target="_blank"><img src = 'web_server/static/img/html5.jpg'></a>
 <td><img src = 'web_server/static/img/video.jpg'>
 </tr>
 </table>
