@@ -53,8 +53,6 @@ Here are some demo images and demo videos.
 </tr>
 </table>
 
-
-<iframe height=498 width=510 src='https://player.youku.com/embed/XNDU4NjI2MjkxNg==' frameborder=0 'allowfullscreen'></iframe>
  
 ## Reference
 
